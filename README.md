@@ -15,9 +15,9 @@ I have another repo in the works that implements the client side of PR01. Stay t
 
 ## Build and Install Instructions
 ### Atmega328p
-'make clean'
-'make m328p'
-'sh install.sh bridge_m328p_{VERSION}.hex'
+    make clean
+    make m328p
+    sh install.sh bridge_m328p_{VERSION}.hex
 Make sure the programmer settings in install.sh are suitable for your application.
 
 Cameron Harper 2012
