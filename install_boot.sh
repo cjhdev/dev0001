@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# install the ladyada modified arduino bootloader with fuses - thanks ladayada :-)
+# install the bootloader
 #
 LOW=0xFF
 HIGH=0xDA
@@ -11,4 +11,4 @@ LOCK=0x0F
 PROG="-c dragon_isp -P usb"
 PART=ATMEGA328P
 
-avrdude $PROG -p $PART -U lock:w:$UNLOCK:m -U lfuse:w:$LOW:m -U hfuse:w:$HIGH:m -U efuse:w:$EXTEND:m -U flash:w:ATmegaBOOT_xx8_adaboot328.hex -U lock:w:$LOCK:m
+avrdude $PROG -p $PART -U lock:w:$UNLOCK:m -U lfuse:w:$LOW:m -U hfuse:w:$HIGH:m -U efuse:w:$EXTEND:m -U flash:w:$1 -U lock:w:$LOCK:m

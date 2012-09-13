@@ -8,5 +8,5 @@ PROG="-c arduino -P /dev/ttyUSB0 -b 19200"
 
 PART=ATMEGA328P
 
-avrdude $PROG -p $PART -U flash:w:bridge.hex
+avrdude $PROG -p $PART -U flash:w:$1
 

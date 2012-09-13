@@ -24,7 +24,9 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
-#define F_CPU       16000000UL
+#define VERSION "0.01"
+
+#define F_CPU 16000000UL
 
 #include <stdint.h>
 #include <avr/interrupt.h>
@@ -187,7 +189,7 @@ typedef struct {
 
 #define PR01_VERSION            0
 #define PR01_DEFAULT_RETRY      1000
-#define PR01_DEFAULT_RATE       ((F_CPU / 10000) >> 1)
+#define PR01_DEFAULT_RATE       ((F_CPU / 100000) >> 1)
 
 /* PR01 Service Primitive Tags */
 typedef enum {
@@ -333,7 +335,9 @@ static int twi_getbyte(twi_t *t, unsigned option, uint8_t *b)
     /* release SDA */
     sda_hi(t);
 
-    for(i=8; i; i--, c<<=1){
+    for(i=8; i; i--){
+
+        c<<=1;
 
         TWI_DELAY(t);
 

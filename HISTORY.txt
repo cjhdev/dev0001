@@ -1,8 +1,10 @@
 dev0001: History of changes
 --------------------------------------------------------------------------------
 V0.01:
-FEATURE: Server side PR01 implementation with bit-bashed TWI
+FEATURE: Server side PR01 implementation with bit-bashed two-wire
 
 Tagged v0.01 25 Aug 2012
 
 V0.01A:
+FEATURE: extracting version string from source instead of defining in makefile
+BUG: twi_putbyte was left shifting the final result
