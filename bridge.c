@@ -59,9 +59,9 @@ struct uart_driver {
 
 volatile struct uart_driver uart;
 
-#define FRAMECHAR   0x7F
+#define FRAMECHAR   0x7E
 #define STUFFCHAR   0x7D
-#define XORCHAR     0x40
+#define XORCHAR     0x20
 
 /* uart rx interupt with framing */
 ISR(USART_RX_vect)
@@ -129,7 +129,7 @@ ISR(USART_TX_vect)
             }
             else if((*uart.data == FRAMECHAR)||(*uart.data == STUFFCHAR)){
                 uart.state |= 0x80;
-                UDR0 = FRAMECHAR;
+                UDR0 = STUFFCHAR;
                 return;
             }
             else
