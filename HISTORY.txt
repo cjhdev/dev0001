@@ -8,3 +8,5 @@ Tagged v0.01 25 Aug 2012
 V0.01A:
 FEATURE: extracting version string from source instead of defining in makefile
 BUG: twi_putbyte was left shifting the final result
+BUG: Frame and stuff characters were wrong. Also frame character was being used
+instead of stuff character.
