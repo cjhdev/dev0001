@@ -1,6 +1,6 @@
 # dev0001: Two-Wire Bridge
 
-This project is an implementation of the server side of a two-wire bridging protocol I made up. I call the protocol PR01 and the full details are published [here](http://cjh.id.au/doc/doc0002-0.01.pdf).
+This project is an implementation of the server side of a two-wire bridging protocol I made up. I call the protocol PR01 and the full details are published [here](doc/doc0002-0.02.pdf).
 
 The code compiles for an atmega328p (arduino duemilanove) and I tend to use it with an stk500 compatible bootloader.
 
