@@ -10,9 +10,6 @@ Simplified BSD License; Notice is in the source.
 ## How Could This Be Useful?
 You can use this code to easily bridge a PC to a two-wire device using a common dev board.
 
-## Where Can I Get Client Software?
-I have another repo in the works that implements the client side of PR01. Stay tuned.
-
 ## Build and Install Instructions
 ### Atmega328p
     make clean
